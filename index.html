@@ -71,12 +71,13 @@
 
         $(function () {
             $('form').submit(function () {
+                const preStr = "ユーザー登録ありがとうございます！";
                 const name    = $('input[name="name"]').val();
                 const udetate = $('input[name="udetate"]').val();
                 const fukkin  = $('input[name="fukkin"]').val();
                 const haikin  = $('input[name="haikin"]').val();
                 const sukuwat = $('input[name="sukuwat"]').val();
-                const msg = `${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}`;
+                const msg = `${preStr}\n\n${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}`;
                 sendText(msg);
                 return false;
             });
