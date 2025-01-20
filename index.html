@@ -58,7 +58,7 @@
         function sendText(text) {
             liff.sendMessages([{
                 'type': 'text',
-                'text': text
+                'text': 'ユーザー登録ありがとうございます。'+text
             }]).then(function () {
                 liff.closeWindow();
             }).catch(function (error) {
@@ -76,7 +76,7 @@
                 const fukkin  = $('input[name="fukkin"]').val();
                 const haikin  = $('input[name="haikin"]').val();
                 const sukuwat = $('input[name="sukuwat"]').val();
-                const msg = `ユーザー登録ありがとうございます。\n${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}`;
+                const msg = `${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}`;
                 sendText(msg);
                 return false;
             });
